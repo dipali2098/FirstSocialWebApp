@@ -1,0 +1,27 @@
+<html>
+<body>
+	<h1>Welcome</h1>
+	<br>
+	<br>
+
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			<ul>
+			{% for message in messages %}
+				<li><strong>{{ message }}</strong></li>
+			{% endfor %}
+			</ul>
+		{% endif %}
+	{% endwith %}
+
+	<form action = "{{url_for('home')}}" method = 'post' >
+		<p>User ID:</p>
+		<input type = 'text' size = '25' name = 'userid1'><br>
+		<p>Password:</p>
+		<input type="password" size="25" name="userpassword1" ><br><br>
+		<input type="submit" name="signin" value="Sign In">
+	</form>
+	<br>
+	<a href= "{{url_for('newUser')}}" >New User?</a>
+</body>
+</html>

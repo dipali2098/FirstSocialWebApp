@@ -1,0 +1,30 @@
+<html>
+<body>
+	<h1>Create an account</h1><br><br>
+
+	<form action = "{{url_for('newUser')}}" method = 'post'> 
+	
+		<p>Name:</p>
+		<input type = 'text' size = '30' name = 'username'><br><br>
+		<p>User Id:</p>
+		<input type = 'text' size = '30' name = 'userid'><br><br>
+		<p>DOB:</p>
+		<input type = 'date' size= '30' name = 'userdob'><br><br>
+		<p>Gender:</p>
+		<input type="radio" id="male" name="usergender" value="male">
+  		<label for="male">Male</label><br>
+  		<input type="radio" id="female" name="usergender" value="female">
+  		<label for="female">Female</label><br>
+  		<input type="radio" id="other" name="usergender" value="other">
+  		<label for="other">Other</label><br><br>
+  		<p>Email:</p>
+		<input type = 'email' size ='30' name = 'useremail'><br><br>
+		<p>Mobile No:</p>
+		<input type = 'text' size ='30' name = 'usermobno'><br><br>
+		<p>Password</p>
+		<input type = 'password' size = '30' name = 'userpassword'><br><br>
+		<input type = 'submit' value = 'Sign Up'>
+	</form>
+
+</body>
+</html>
